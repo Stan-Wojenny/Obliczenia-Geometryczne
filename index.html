@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obliczenia Geometryczne</title>
+    <link rel="shortcut icon" href="assets/web-icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="title-container">
+            <h1>Obliczenia Geometryczne</h1>
+        </div>
+    </header>
+    <section class="main">
+        <div id="alert">
+            <button onclick="StartObliczenia()"><img style="opacity: 0.8;" src="assets/x.png"></button>
+            <p>Nie wpisałeś/aś wszytkich wartości!</p>
+        </div>
+        <div id="alert2">
+            <button onclick="StartObliczenia()"><img style="opacity: 0.8;" src="assets/x.png"></button>
+            <p>Wszystkie długości muszą być większe od 0!</p>
+            <p class="underline">Warunek: a > 0 i b > 0 i c > 0</p>
+        </div>
+        <div id="alert3">
+            <button onclick="StartObliczenia()"><img style="opacity: 0.8;" src="assets/x.png"></button>
+            <p>Wysokość nachylenia(l) musi być większa lub równa wysokości(h)!</p>
+            <p class="underline">Warunek: l > lub = h</p>
+        </div>
+        <div class="border-effect" id="all">
+            <div class="all-container" id="all2" >
+                <div class="opts-contianer">
+                    <button class="opt1" onclick="Show1()">
+                        <img id="anim1" src="assets/prostopadloscian-anim.gif">
+                        <img id="static1" src="assets/prostopadloscian.png">
+                        <div class="name"><span>Prostopadłościan</span></div>
+                    </button>
+                    <button class="opt2" onclick="Show2()">
+                        <img id="anim2" src="assets/Stożek-anim.gif">
+                        <img id="static2" src="assets/Stożek.png">
+                        <div class="name"><span>Stożek</span></div>
+                    </button>
+                </div>
+                <div class="info">
+                    <img class="info1" src="assets/arrow1.png"><p>Wybierz bryłę</p><img class  ="info2" src="assets/arrow.png">
+                </div>
+               <div>
+                <div id="opt1-content">
+                    <div class="input-container">
+                       <div>
+                            <div>
+                                <p>Długość (a)</p><br>
+                                <input type="number" id="a">
+                            </div>
+                          <div>
+                                <p>Szerokość (b)</p><br>
+                                <input type="number" id="b">
+                          </div>
+                           <div>
+                                <p>Wysokość (c)</p><br>
+                                <input type="number" id="c">
+                           </div>
+                       </div>
+                    </div>
+                    <div class="submits">
+                        <div>
+                            <button onclick="ProstOutPut()"  class="submit1"><span>Oblicz</span></button>
+                        </div>
+                        <div>
+                            <button onclick="clearInputs()"class="submit1"><span>Wyczyść</span></button>
+                        </div>
+                    </div>
+                    <div class="output-container">
+                        <div>
+                            <div>
+                                <p>Pole Powierzchni: <span id="opt1-PP"></span></p>
+                            </div>
+                            <div>
+                                <p>Objętość: <span id="opt1-OBJ"></span></p>
+                            </div>
+                            <div>
+                                <p>Przekątna: <span id="opt1-PRZE"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+                <div id="opt2-content">
+                    <div class="input-container">
+                       <div>
+                            <div>
+                                <p>Promień (r)</p><br>
+                                <input type="number" id="a1">
+                            </div>
+                            <div>
+                                <p>Wysokość (h)</p><br>
+                                <input type="number" id="b1">
+                            </div>
+                            <div>
+                                <p>Wysokość nachylenia (l)</p><br>
+                                <input type="number" id="c1">
+                            </div>
+                       </div>
+                    </div>
+                    <div class="submits">
+                        <div>
+                            <button onclick="StozOutPut()" class="submit1"><span>Oblicz</span></button>
+                        </div>
+                        <div>
+                            <button onclick="clearInputs()" class="submit1"><span>Wyczyść</span></button>
+                        </div>
+                    </div>
+                    <div class="output-container">
+                        <div>
+                            <div>
+                                <p>Pole Powierzchni: <span id="opt2-PP"></span></p>
+                            </div>
+                            <div>
+                                <p>Objętość: <span id="opt2-OBJ"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div></div>
+    <footer>
+        <div>
+            <p>Strona stworzona i zaprojektowana przez Mikołaja Leszczyńskiego</p>
+        </div>
+        <div class="footer-info">
+            <a href="https://github.com/Stan-Wojenny" target="_blank"><span>GitHub: </span><img src="assets/GitHub-icon.png"></a>
+            <a href="https://www.elektronik.edu.pl/" target="_blank"><span>Szkoła: </span><img  src="assets/ZSE-icon.png"></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
