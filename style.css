@@ -44,7 +44,7 @@ footer,body{
     cursor: pointer;
 }
 #alert,#alert2,#alert3{
-    position:absolute;
+    position:fixed;
     left: 50%;
     transform: translateX(-50%);
     top: 30%;
